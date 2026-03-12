@@ -444,6 +444,96 @@ html{
     }
 
 }
+
+/* ==============================
+   Certifications Section - Graphic Badge Style
+   ============================== */
+.certifications {
+    padding: 60px 20px;
+    background-color: #f5f7fa;
+    text-align: center;
+}
+
+.certifications .heading {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+.certifications .heading span {
+    color: #1a73e8; /* Highlight color */
+}
+
+/* Container for certificate badges */
+.cert-graphics-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* Individual certificate badge */
+.cert-graphic {
+    position: relative;
+    width: 220px;
+    background: linear-gradient(135deg, #ffffff, #e6f0ff);
+    border-radius: 20px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cert-graphic:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+
+/* Certificate image/icon */
+.cert-graphic img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+/* Certificate title */
+.cert-graphic h3 {
+    font-size: 1rem;
+    margin-bottom: 12px;
+    color: #333;
+}
+
+/* Button inside badge */
+.cert-graphic .btn {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 12px;
+    background-color: #1a73e8;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.cert-graphic .btn:hover {
+    transform: scale(1.05);
+    background-color: #155ab6;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 900px) {
+    .cert-graphics-container {
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .cert-graphic {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
 /*company section code*/
 /* Company Section */
 
