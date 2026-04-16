@@ -205,6 +205,7 @@ const translations = {
         nav_contact: 'Contact',
 
         greeting: 'Bonjour, je suis',
+        and_im: "Et je suis",
         home_desc: 'Étudiant en BTS SIO, spécialité SISR — passionné par les réseaux, la cybersécurité et l\'administration système.',
         download_cv: 'Télécharger CV',
         typing_words: ['Étudiant en Informatique', 'Passionné des Réseaux', 'Apprenant en Cybersécurité', 'BTS SIO – SISR'],
