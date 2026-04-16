@@ -1,756 +1,531 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <link rel="stylesheet" href="style.css">
-    <title>Sahed ARSHED ALI KHAN - Portfolio</title>
+    <title>Sahed ARSHED ALI KHAN – Portfolio</title>
 </head>
-
 <body>
-    <!--Header section code-->
 
-    <header class="header">
-        <a href="home" class="logo">Sahed ARSHED ALI KHAN</a>
+    <!-- Header -->
+    <header class="header" id="header">
+        <a href="#home" class="logo">Sahed<span>.</span></a>
+        <!-- Language switcher injected here by i18n.js -->
         <i class='bx bx-menu' id="menu-icon"></i>
-
         <nav class="navbar">
-            <a href="#home">Home</a>
-            <a href="#about">About me</a>
-            <a href="#bts-sio">BTS SIO</a>
-            <a href="#skills">Skills</a>
-            <a href="#certifications">Certifications</a>
-            <a href="#company">Company</a>
-            <a href="#exams">Exams</a>
-            <a href="#projects">Projects</a>
-            <a href="#Technology-Watch">Technology Watch</a>
-            <a href="#contact">Contact</a>
+            <a href="#home" data-nav="nav_home">Home</a>
+            <a href="#about" data-nav="nav_about">About</a>
+            <a href="#bts-sio" data-nav="nav_bts">BTS SIO</a>
+            <a href="#skills" data-nav="nav_skills">Skills</a>
+            <a href="#certifications" data-nav="nav_certs">Certifications</a>
+            <a href="#company" data-nav="nav_company">Company</a>
+            <a href="#exams" data-nav="nav_exams">Exams</a>
+            <a href="#projects" data-nav="nav_projects">Projects</a>
+            <a href="#Technology-Watch" data-nav="nav_tech">Tech Watch</a>
+            <a href="#contact" data-nav="nav_contact">Contact</a>
         </nav>
     </header>
 
-    <!--Home section code-->
+    <!-- Home -->
     <section class="home" id="home">
         <div class="home-img">
-            <img src="assets/profil-sahed.jpg" alt="Profil Image">
-
+            <img src="assets/profil-sahed.jpg" alt="Sahed Arshed Ali Khan">
         </div>
         <div class="home-content">
-            <h3>Hello, Myself</h3>
-            <h1> Sahed Arshed Ali Khan</h1>
-            <h3> And I'm a <span class="multiple-text">Computer Science Student</span></h3>
-            <p>BTS SIO student, specializing in SISR, passionate about networking, cybersecurity, and system
-                administration.
-            </p>
-
+            <p class="greeting" data-i18n="greeting">Hello, I'm</p>
+            <h1>Sahed Arshed<br>Ali Khan</h1>
+            <h3>And I'm a <span class="multiple-text"></span><span class="cursor">|</span></h3>
+            <p class="home-desc" data-i18n="home_desc">BTS SIO student, specializing in SISR — passionate about networking, cybersecurity, and system administration.</p>
             <div class="social-media">
-                <a href="https://www.linkedin.com/in/sahed-arshed-ali-khan-6942103b6/" target="_blank"><i
-                        class="bx bxl-linkedin"></i></a>
-                <a href="https://github.com/Sahed-Khan" target="_blank"><i class="bx bxl-github"></i></a>
-                <a href="https://www.instagram.com/sahed5000a" target="_blank"><i class="bx bxl-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/sahed-arshed-ali-khan-6942103b6/" target="_blank" aria-label="LinkedIn"><i class="bx bxl-linkedin"></i></a>
+                <a href="https://github.com/Sahed-Khan" target="_blank" aria-label="GitHub"><i class="bx bxl-github"></i></a>
+                <a href="https://www.instagram.com/sahed5000a" target="_blank" aria-label="Instagram"><i class="bx bxl-instagram"></i></a>
             </div>
-
-            <a href="assets/CV_Sahed_ARSHED_ALI_KHAN.pdf" class="btn">View my CV</a>
-
-        </div>
-
-    </section>
-
-    <!--About section Code -->
-    <section class="about" id="about">
-
-        <div class="about-content">
-            <h2 class="heading">About <span>Me</span></h2>
-
-            <h3>I'm a <span>IT Student</span></h3>
-
-            <p>
-                My name is Sahed Arshed Ali Khan and I am currently a student in the BTS SIO program
-                (IT Services for Organizations), specializing in SISR (Infrastructure, Systems and Networks Solutions).
-
-                I am passionate about computer science, particularly in networking, system administration,
-                and cybersecurity.
-
-                During my studies, I have developed skills in managing IT infrastructures, configuring
-                networks, and securing systems.
-
-                I enjoy learning new technologies and taking on technical challenges.
-
-                My goal is to pursue a career in systems and network administration while continuing
-                to strengthen my skills in cybersecurity.
-            </p>
-
-            <a href="#timeline" class="btn">My Academic Journey</a>
-        </div>
-
-        <div class="about-img">
-            <img src="assets/profil-sahed.jpg" alt="About Image">
-        </div>
-
-    </section>
-    <!-- Timeline section -->
-    <section class="timeline" id="timeline">
-        <h2 class="heading">My <span>Journey</span></h2>
-
-        <div class="timeline-container">
-
-            <div class="timeline-item">
-                <h3>2026 - 2027</h3>
-                <h4>BTS SIO - SISR</h4>
-                <span>CFA Aurlom - Paris 75019, France</span>
-                <p>I am currently pursuing a BTS SIO - SISR (Services Informatiques aux Organisations, specializing in
-                    Infrastructure, Systems and Networks). This program focuses on system administration, network
-                    management, IT infrastructure, and cybersecurity. Initially, I started in a BTS CIEL
-                    (Cybersecurity), but after one year, I decided to reorient my studies toward SISR to gain broader
-                    expertise in networks, system administration, and IT solutions. This change allowed me to combine my
-                    passion for cybersecurity with practical skills in managing and securing IT infrastructures
-                </p>
-            </div>
-
-            <div class="timeline-item">
-                <h3>2025 - 2026</h3>
-                <h4>BTS CIEL - Option A: IT and Networking</h4>
-                <span>CFA Aurlom - Paris 75019, France</span>
-                <p>I initially enrolled in the BTS CIEL (Cybersecurity) program, where I spent my first year learning
-                    the fundamentals of information security, network protection, and system administration. During this
-                    year, I gained practical experience in securing IT infrastructures, managing basic network
-                    configurations, and understanding cybersecurity principles, which laid a strong foundation for my
-                    later reorientation to the BTS SIO - SISR program.
-                </p>
-            </div>
-
-            <div class="timeline-item">
-                <h3>2022 - 2025</h3>
-                <h4>Bachelor in Physical Measurements</h4>
-                <span>IUT Orsay - Gif-sur-Yvette 91190, France</span>
-                <p>I began a three-year BUT program focused on Physics, where I developed analytical thinking and
-                    troubleshooting skills. Over time, I discovered that my true passion lies in computer science, IT
-                    systems, and networking, which led me to reorient my studies toward the BTS SIO – SISR program. This
-                    experience helped me clarify my career path and focus on the field that excites me most.
-                </p>
-            </div>
-
-            <div class="timeline-item">
-                <h3>2019 - 2022</h3>
-                <h4> High School Diploma - General Baccalaureate</h4>
-                <span>Lycée Henri Wallon - Aubervilliers 93300, France</span>
-                <p>I obtained my General French Baccalaureate at Lycée Victor Hugo, with a specialization in Mathematics
-                    and Physics. During this program, I developed strong analytical and problem-solving skills,
-                    deepening my understanding of scientific concepts, mathematical reasoning, and experimental physics.
-                    This solid foundation prepared me for higher studies in IT, networks, and system administration.
-                </p>
-
-            </div>
-
-    </section>
-
-    <!--BTS SIO Présentation-->
-    <section class="bts-sio" id="bts-sio">
-
-        <h2 class="heading">BTS <span>SIO</span></h2>
-
-        <div class="bts-container">
-
-            <!-- Carte principale -->
-            <div class="bts-card main-card">
-                <h3>What is the BTS SIO ?</h3>
-
-                <p>
-                    The BTS SIO (Brevet de Technicien Supérieur Services Informatiques aux Organisations)
-                    is a two-year higher education diploma recognized by the French State (RNCP level 5).
-                    It trains students to become IT professionals capable of managing and developing
-                    information systems within organizations such as companies, public administrations
-                    or digital service companies.
-                </p>
-
-                <p>
-                    During the training, students learn how to design, deploy and maintain IT solutions
-                    adapted to the needs of businesses. The program combines theoretical knowledge and
-                    practical projects in areas such as system administration, networking, software
-                    development, databases and cybersecurity.
-                </p>
-
-                <p>
-                    The BTS SIO prepares students for immediate employment in the IT sector or for
-                    further studies such as a professional bachelor’s degree, engineering school
-                    or specialized IT training.
-                </p>
-            </div>
-
-            <!-- Carte SLAM -->
-            <div class="bts-card">
-                <h3>Option SLAM</h3>
-
-                <p>
-                    SLAM stands for "Solutions Logicielles et Applications Métiers".
-                    This specialization focuses on software development and application design.
-                </p>
-
-                <p>
-                    Students learn how to design, develop, test and maintain applications used by
-                    organizations. The training includes programming languages, web development,
-                    database management and application security.
-                </p>
-
-                <p>
-                    Graduates from the SLAM option often work as web developers, application developers
-                    or software analysts. Their main mission is to create and maintain digital tools
-                    that support the activities of companies and users.
-                </p>
-            </div>
-
-            <!-- Carte SISR -->
-            <div class="bts-card">
-                <h3>Option SISR</h3>
-
-                <p>
-                    SISR means "Solutions d’Infrastructure, Systèmes et Réseaux".
-                    This specialization focuses on the installation, administration and security
-                    of IT infrastructures.
-                </p>
-
-                <p>
-                    Students learn how to configure networks, manage servers, supervise IT systems
-                    and ensure the availability and security of digital services within organizations.
-                </p>
-
-                <p>
-                    The SISR option prepares students for careers such as system administrator,
-                    network technician or IT infrastructure specialist responsible for maintaining
-                    and securing the company’s information system.
-                </p>
-            </div>
-        </div>
-    </section>
-    <!--Skill section code-->
-    <section class="skills" id="skills">
-
-        <h2 class="heading">My <span>Skills</span></h2>
-
-        <div class="skills-container">
-
-            <!-- Programming -->
-            <div class="skills-card">
-                <i class='bx bx-code-alt'></i>
-                <h3>Programming</h3>
-                <p>
-                    Proficiency in programming languages including
-                    <strong>JavaScript, C and Python</strong>.
-                    Hands-on experience in coding and solving programming problems
-                </p>
-            </div>
-
-            <!-- Web Development -->
-            <div class="skills-card">
-                <i class='bx bx-globe'></i>
-                <h3>Web Development</h3>
-                <p>
-                    Development of web applications using
-                    <strong>HTML, CSS and JavaScript</strong>.
-                    Creation of responsive and modern websites.
-                </p>
-            </div>
-
-            <!-- Database -->
-            <div class="skills-card">
-                <i class='bx bx-data'></i>
-                <h3>Database</h3>
-                <p>
-                    Knowledge of relational databases and
-                    <strong>MySQL</strong> for storing, managing and querying data.
-                </p>
-            </div>
-
-            <!-- Software & Design -->
-            <div class="skills-card">
-                <i class='bx bx-cube'></i>
-                <h3>Software & Design</h3>
-                <p>
-                    3D modeling using <strong>SolidWorks</strong> including
-                    mechanical parts design, assemblies and technical objects.
-                    Development of <strong>2D games with Godot Engine</strong>.
-                </p>
-            </div>
-
-            <!-- Network & Virtualization -->
-            <div class="skills-card">
-                <i class='bx bx-network-chart'></i>
-                <h3>Network & Virtualization</h3>
-                <p>
-                    Virtual environments using <strong>VMware</strong>.
-                    Configuration of <strong>pfSense firewall, Kali Linux and Debian</strong>.
-                    Network analysis with <strong>Wireshark and Nmap</strong>.
-                    Incident management using <strong>GLPI</strong>.
-                </p>
-            </div>
-
-            <!-- Languages -->
-            <div class="skills-card">
-                <i class='bx bx-world'></i>
-                <h3>Languages</h3>
-                <p>
-                    <strong>Bengali / Bangla</strong> – Native language<br>
-                    <strong>English</strong> – B2 Level
-                    (EF SET English Certificate)
-                    <br><strong>French</strong> - Native language
-                </p>
-            </div>
-
-        </div>
-
-    </section>
-    <section class="certifications" id="certifications">
-        <h2 class="heading">My <span>Certifications</span></h2>
-
-        <div class="cert-graphics-container">
-
-            <!-- Certificate 1 -->
-            <div class="cert-graphic">
-                <img src="assets/logo_efset.jpg" alt="English Certificate">
-                <h3>EF SET English Certificate</h3>
-                <a href="https://cert.efset.org/pBESVD" target="_blank" class="btn">View Certificate</a>
-            </div>
-
-            <!-- Certificate 2 -->
-            <div class="cert-graphic">
-                <img src="assets/logo-cisco.png" alt="Cisco Intro Cybersecurity">
-                <h3>Cisco Introduction to Cybersecurity</h3>
-                <a href="https://www.credly.com/badges/d2ddfeff-7844-4ba6-8eb5-30457096af8a" target="_blank"
-                    class="btn">View Certificate</a>
-            </div>
-
-            <!-- Add more certificates -->
-        </div>
-    </section>
-
-    <!--company section code-->
-    <section class="company" id="company">
-
-        <h2 class="heading">Internship <span>Target Companies</span></h2>
-
-        <div class="company-container">
-
-            <!-- Company 1 -->
-            <div class="company-card">
-
-                <i class='bx bx-network-chart'></i>
-                <h3>Network Infrastructure Company</h3>
-
-                <h4>Company Identification</h4>
-
-                <ul>
-                    <li><strong>Domain:</strong> Network Infrastructure Services</li>
-                    <li><strong>Location:</strong> France</li>
-                    <li><strong>Legal Form:</strong> IT Services Company</li>
-                    <li><strong>Company Size:</strong> Medium to large enterprise</li>
-                    <li><strong>Employees:</strong> Around 500 - 2000 employees</li>
-                    <li><strong>Business Sector:</strong> Network installation and IT infrastructure management</li>
-                </ul>
-
-                <h4>Technical Missions (Desired Internship)</h4>
-
-                <p>
-                    During an internship in a network infrastructure company, I would like
-                    to participate in configuring routers, switches and maintaining
-                    enterprise network infrastructures.
-                </p>
-
-                <h4>Missions and Tasks</h4>
-
-                <ul>
-                    <li>Network configuration and monitoring</li>
-                    <li>Installation of networking equipment</li>
-                    <li>Infrastructure troubleshooting</li>
-                    <li>Network security configuration</li>
-                </ul>
-
-                <h4>Possible Difficulties</h4>
-
-                <p>
-                    Working on complex enterprise networks could require advanced
-                    troubleshooting skills and quick problem analysis.
-                </p>
-
-                <h4>Skills That Could Be Learned</h4>
-
-                <ul>
-                    <li>Advanced network configuration</li>
-                    <li>Infrastructure monitoring</li>
-                    <li>Enterprise network security</li>
-                    <li>Professional teamwork</li>
-                </ul>
-
-                <h4>Conclusion</h4>
-
-                <p>
-                    This type of company would allow me to develop strong technical
-                    skills in network administration and infrastructure management.
-                </p>
-
-            </div>
-
-            <!-- Company 2 -->
-            <div class="company-card">
-
-                <i class='bx bx-shield-quarter'></i>
-                <h3>Cybersecurity Company</h3>
-
-                <h4>Company Identification</h4>
-
-                <ul>
-                    <li><strong>Domain:</strong> Cybersecurity Services</li>
-                    <li><strong>Location:</strong> Europe</li>
-                    <li><strong>Legal Form:</strong> Cybersecurity Consulting Company</li>
-                    <li><strong>Company Size:</strong> Medium enterprise</li>
-                    <li><strong>Employees:</strong> Around 200 - 1000 employees</li>
-                    <li><strong>Business Sector:</strong> IT security and cyber threat protection</li>
-                </ul>
-
-                <h4>Technical Missions (Desired Internship)</h4>
-
-                <p>
-                    In a cybersecurity company, I would like to learn how security
-                    analysts detect cyber threats and protect networks from attacks.
-                </p>
-
-                <h4>Missions and Tasks</h4>
-
-                <ul>
-                    <li>Network traffic analysis</li>
-                    <li>Security monitoring</li>
-                    <li>Vulnerability scanning</li>
-                    <li>Incident response support</li>
-                </ul>
-
-                <h4>Possible Difficulties</h4>
-
-                <p>
-                    Cybersecurity requires constant monitoring and strong analytical
-                    skills to quickly identify potential threats.
-                </p>
-
-                <h4>Skills That Could Be Learned</h4>
-
-                <ul>
-                    <li>Threat detection</li>
-                    <li>Network security analysis</li>
-                    <li>Use of cybersecurity tools</li>
-                    <li>Incident response methods</li>
-                </ul>
-
-                <h4>Conclusion</h4>
-
-                <p>
-                    Completing an internship in cybersecurity would allow me to
-                    strengthen my knowledge in protecting systems and networks.
-                </p>
-
-            </div>
-
-            <!-- Company 3 -->
-            <div class="company-card">
-
-                <i class='bx bx-server'></i>
-                <h3>Cloud & IT Services Company</h3>
-
-                <h4>Company Identification</h4>
-
-                <ul>
-                    <li><strong>Domain:</strong> Cloud Computing and IT Services</li>
-                    <li><strong>Location:</strong> International</li>
-                    <li><strong>Legal Form:</strong> Digital Services Company</li>
-                    <li><strong>Company Size:</strong> Large enterprise</li>
-                    <li><strong>Employees:</strong> More than 5000 employees</li>
-                    <li><strong>Business Sector:</strong> Cloud infrastructure and digital transformation</li>
-                </ul>
-
-                <h4>Technical Missions (Desired Internship)</h4>
-
-                <p>
-                    In this type of company, I would like to work on cloud
-                    infrastructure, system administration and virtualization.
-                </p>
-
-                <h4>Missions and Tasks</h4>
-
-                <ul>
-                    <li>Server configuration</li>
-                    <li>Virtual machine management</li>
-                    <li>Cloud infrastructure monitoring</li>
-                    <li>IT support and maintenance</li>
-                </ul>
-
-                <h4>Possible Difficulties</h4>
-
-                <p>
-                    Managing large cloud infrastructures requires strong
-                    technical knowledge and understanding of distributed systems.
-                </p>
-
-                <h4>Skills That Could Be Learned</h4>
-
-                <ul>
-                    <li>Cloud infrastructure management</li>
-                    <li>System administration</li>
-                    <li>Virtualization technologies</li>
-                    <li>Enterprise IT operations</li>
-                </ul>
-
-                <h4>Conclusion</h4>
-
-                <p>
-                    This environment would help me develop my skills in system
-                    administration, virtualization and modern IT infrastructures.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!--Exams section code-->
-    <!-- Exams Section -->
-    <section class="exams" id="exams">
-        <h2 class="heading">BTS SIO - <span>Exams</span></h2>
-
-        <div class="exams-container">
-
-            <p>
-                The <strong>BTS SIO – SISR</strong> is evaluated through a combination of continuous assessments and
-                final exams at the end of the two-year program.
-                The final exams are organized into several subjects, each testing specific technical and professional
-                skills.
-                In total, the exams represent approximately <strong>40 hours of written and practical
-                    evaluations</strong>, complemented by project presentations.
-            </p>
-
-            <h3>Detailed Exam Breakdown</h3>
-
-            <ul class="exam-list">
-                <li>
-                    <strong>1. IT Project Management (E4)</strong> – 4 hours written, coefficient 5
-                    <p>
-                        Students are evaluated on their ability to manage IT projects, plan tasks, write documentation,
-                        and propose solutions according to client needs.
-                        The exam includes case studies, project planning exercises, and analysis of IT needs.
-                    </p>
-                </li>
-
-                <li>
-                    <strong>2. Network and Systems Administration (E5)</strong> – 5 hours written/practical, coefficient
-                    6
-                    <p>
-                        This exam tests the student’s skills in configuring, maintaining, and troubleshooting IT
-                        infrastructures.
-                        Tasks include server administration, network configuration, security implementation, and
-                        incident resolution.
-                    </p>
-                </li>
-
-                <li>
-                    <strong>3. Cybersecurity & IT Security (SISR specific)</strong> – 3 hours written/practical,
-                    coefficient 4
-                    <p>
-                        Students demonstrate their knowledge of network security, firewalls, user access management, and
-                        system protection.
-                        The exam includes scenarios on detecting vulnerabilities and proposing solutions to secure IT
-                        infrastructures.
-                    </p>
-                </li>
-
-                <li>
-                    <strong>4. Technical Support and IT Assistance (E6)</strong> – 3 hours practical, coefficient 3
-                    <p>
-                        Students are assessed on their ability to provide technical support to users, resolve incidents,
-                        and document procedures.
-                        Tasks simulate real-world IT assistance situations in organizations.
-                    </p>
-                </li>
-
-                <li>
-                    <strong>5. Software Development & Scripting (SISR optional)</strong> – 4 hours written/practical,
-                    coefficient 3
-                    <p>
-                        Although SISR focuses on infrastructure, students are expected to have basic scripting skills to
-                        automate tasks,
-                        manage system configurations, and support IT services.
-                    </p>
-                </li>
-
-                <li>
-                    <strong>6. Professional Communication & Documentation (E7)</strong> – 2 hours written, coefficient 2
-                    <p>
-                        This exam evaluates the ability to communicate effectively in a professional environment, write
-                        reports, and document projects and procedures clearly.
-                    </p>
-                </li>
-
-                <li>
-                    <strong>7. Internship/Work Placement Evaluation (Période en entreprise)</strong> – Continuous
-                    assessment, coefficient 6
-                    <p>
-                        Students’ internship performance is evaluated by supervisors and teachers. Criteria include
-                        technical proficiency, professional behavior, and the ability to apply theoretical knowledge to
-                        real-world situations.
-                    </p>
-                </li>
-            </ul>
-
-            <p>
-                Overall, the BTS SIO SISR exams combine <strong>practical IT skills, theoretical knowledge, and
-                    professional competencies</strong>
-                to ensure that graduates are ready to manage and secure IT infrastructures in organizations.
-            </p>
-
-            <a href="assets/BTS_SIO_Annexe_6_Epreuve E5 - Tableau de synthese_2026.xlsx" class="btn download-btn"
-                target="_blank">
-                Download Exams Summary (Xlsx)
+            <a href="assets/CV_Sahed_ARSHED_ALI_KHAN.pdf" class="btn" target="_blank">
+                <i class='bx bx-download'></i> <span data-i18n="download_cv">Download CV</span>
             </a>
         </div>
     </section>
 
-    <!-- Technology Watch Section -->
-    <section class="tech-watch" id="Technology-Watch">
-        <h2 class="heading">Technology <span>Watch</span></h2>
+    <!-- About -->
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="assets/profil-sahed.jpg" alt="About Sahed">
+        </div>
+        <div class="about-content">
+            <h2 class="heading"><span data-i18n="about_heading">About</span> <span data-i18n="about_heading_span">Me</span></h2>
+            <h3 data-i18n="about_subtitle">BTS SIO – SISR Student</h3>
+            <p data-i18n="about_p1">My name is Sahed Arshed Ali Khan. I am currently enrolled in the BTS SIO program (IT Services for Organizations), specializing in SISR (Infrastructure, Systems and Networks Solutions).</p>
+            <p data-i18n="about_p2">I am passionate about networking, system administration, and cybersecurity. I enjoy learning new technologies and taking on technical challenges, with the goal of pursuing a career in systems and network administration.</p>
+            <a href="#timeline" class="btn" data-i18n="about_btn">My Academic Journey</a>
+        </div>
+    </section>
 
+    <!-- Timeline -->
+    <section class="timeline" id="timeline">
+        <h2 class="heading"><span data-i18n="timeline_heading">My</span> <span data-i18n="timeline_heading_span">Journey</span></h2>
+        <div class="timeline-container">
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="year">2026 – 2027</span>
+                    <h3 data-i18n="tl1_title">BTS SIO – SISR</h3>
+                    <span class="location"><i class='bx bx-map'></i> CFA Aurlom – Paris 75019</span>
+                    <p data-i18n="tl1_desc">Currently pursuing BTS SIO – SISR, focused on system administration, network management, IT infrastructure, and cybersecurity.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="year">2025 – 2026</span>
+                    <h3 data-i18n="tl2_title">BTS CIEL – Option A</h3>
+                    <span class="location"><i class='bx bx-map'></i> CFA Aurlom – Paris 75019</span>
+                    <p data-i18n="tl2_desc">First year in BTS CIEL (Cybersecurity) learning fundamentals of information security, network protection, and system administration.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="year">2022 – 2025</span>
+                    <h3 data-i18n="tl3_title">Bachelor in Physical Measurements</h3>
+                    <span class="location"><i class='bx bx-map'></i> IUT Orsay – Gif-sur-Yvette 91190</span>
+                    <p data-i18n="tl3_desc">Three-year BUT program in Physics. Developed analytical thinking that later guided my reorientation toward IT and networking.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="year">2019 – 2022</span>
+                    <h3 data-i18n="tl4_title">General Baccalaureate</h3>
+                    <span class="location"><i class='bx bx-map'></i> Lycée Henri Wallon – Aubervilliers 93300</span>
+                    <p data-i18n="tl4_desc">General Baccalaureate with specialization in Mathematics and Physics, building strong analytical and problem-solving skills.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- BTS SIO -->
+    <section class="bts-sio" id="bts-sio">
+        <h2 class="heading"><span data-i18n="bts_heading">BTS</span> <span data-i18n="bts_heading_span">SIO</span></h2>
+        <div class="bts-container">
+
+            <div class="bts-card main-card">
+                <div class="bts-card-icon"><i class='bx bx-laptop'></i></div>
+                <h3 data-i18n="bts_main_title">What is the BTS SIO?</h3>
+                <p data-i18n="bts_main_p1">The BTS SIO (Brevet de Technicien Supérieur Services Informatiques aux Organisations) is a two-year higher education diploma recognized by the French State (RNCP level 5). It trains students to become IT professionals capable of managing and developing information systems within organizations such as companies, public administrations, or digital service companies.</p>
+                <p data-i18n="bts_main_p2">The program combines theoretical knowledge and practical projects in areas such as system administration, networking, software development, databases, and cybersecurity.</p>
+            </div>
+
+            <div class="bts-card">
+                <div class="bts-card-icon"><i class='bx bx-code-alt'></i></div>
+                <h3 data-i18n="bts_slam_title">Option SLAM</h3>
+                <p data-i18n="bts_slam_p">SLAM stands for "Solutions Logicielles et Applications Métiers". This specialization focuses on software development and application design — programming languages, web development, database management, and application security.</p>
+            </div>
+
+            <div class="bts-card highlight-card">
+                <div class="bts-card-icon"><i class='bx bx-network-chart'></i></div>
+                <h3><span data-i18n="bts_sisr_title">Option SISR</span> <span class="badge" data-i18n="bts_sisr_badge">My Track</span></h3>
+                <p data-i18n="bts_sisr_p">SISR means "Solutions d'Infrastructure, Systèmes et Réseaux". This specialization focuses on installing, administering, and securing IT infrastructures — configuring networks, managing servers, supervising IT systems, and ensuring security of digital services.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="skills" id="skills">
+        <h2 class="heading"><span data-i18n="skills_heading">My</span> <span data-i18n="skills_heading_span">Skills</span></h2>
+        <div class="skills-container">
+
+            <div class="skills-card">
+                <i class='bx bx-code-alt'></i>
+                <h3 data-i18n="skill_prog_title">Programming</h3>
+                <p data-i18n="skill_prog_p">Proficiency in <strong>JavaScript, C, and Python</strong>. Hands-on experience in scripting and problem-solving.</p>
+            </div>
+
+            <div class="skills-card">
+                <i class='bx bx-globe'></i>
+                <h3 data-i18n="skill_web_title">Web Development</h3>
+                <p data-i18n="skill_web_p">Development of web applications using <strong>HTML, CSS, and JavaScript</strong>. Creation of responsive, modern websites.</p>
+            </div>
+
+            <div class="skills-card">
+                <i class='bx bx-data'></i>
+                <h3 data-i18n="skill_db_title">Database</h3>
+                <p data-i18n="skill_db_p">Knowledge of relational databases and <strong>MySQL</strong> for storing, managing, and querying data.</p>
+            </div>
+
+            <div class="skills-card">
+                <i class='bx bx-cube'></i>
+                <h3 data-i18n="skill_design_title">Software & Design</h3>
+                <p data-i18n="skill_design_p">3D modeling with <strong>SolidWorks</strong>. 2D game development with <strong>Godot Engine</strong>.</p>
+            </div>
+
+            <div class="skills-card">
+                <i class='bx bx-network-chart'></i>
+                <h3 data-i18n="skill_net_title">Network & Virtualization</h3>
+                <p data-i18n="skill_net_p">Virtual environments with <strong>VMware</strong>. Configuration of <strong>pfSense, Kali Linux, Debian</strong>. Network analysis with <strong>Wireshark &amp; Nmap</strong>. GLPI incident management.</p>
+            </div>
+
+            <div class="skills-card">
+                <i class='bx bx-world'></i>
+                <h3 data-i18n="skill_lang_title">Languages</h3>
+                <p data-i18n="skill_lang_p"><strong>Bengali / Bangla</strong> – Native<br><strong>French</strong> – Native<br><strong>English</strong> – B2 Level (EF SET Certified)</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Certifications -->
+    <section class="certifications" id="certifications">
+        <h2 class="heading"><span data-i18n="certs_heading">My</span> <span data-i18n="certs_heading_span">Certifications</span></h2>
+        <div class="cert-graphics-container">
+
+            <div class="cert-graphic">
+                <div class="cert-img-wrap">
+                    <img src="assets/logo_efset.jpg" alt="EF SET English Certificate">
+                </div>
+                <h3 data-i18n="cert1_title">EF SET English Certificate</h3>
+                <p data-i18n="cert1_desc">B2 Level – English Proficiency</p>
+                <a href="https://cert.efset.org/pBESVD" target="_blank" class="btn"><span data-i18n="cert_view">View Certificate</span> <i class='bx bx-link-external'></i></a>
+            </div>
+
+            <div class="cert-graphic">
+                <div class="cert-img-wrap">
+                    <img src="assets/logo-cisco.png" alt="Cisco Intro Cybersecurity">
+                </div>
+                <h3 data-i18n="cert2_title">Cisco Introduction to Cybersecurity</h3>
+                <p data-i18n="cert2_desc">Cisco Networking Academy</p>
+                <a href="https://www.credly.com/badges/d2ddfeff-7844-4ba6-8eb5-30457096af8a" target="_blank" class="btn"><span data-i18n="cert_view">View Certificate</span> <i class='bx bx-link-external'></i></a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Company -->
+    <section class="company" id="company">
+        <h2 class="heading"><span data-i18n="company_heading">Internship</span> <span data-i18n="company_heading_span">Target Companies</span></h2>
+        <div class="company-container">
+
+            <div class="company-card">
+                <div class="company-icon"><i class='bx bx-network-chart'></i></div>
+                <h3 data-i18n="company1_title">Network Infrastructure Company</h3>
+                <ul class="company-meta">
+                    <li><strong data-i18n="label_domain">Domain:</strong> <span data-i18n="company1_domain">Network Infrastructure Services</span></li>
+                    <li><strong data-i18n="label_location">Location:</strong> <span data-i18n="company1_loc">France</span></li>
+                    <li><strong data-i18n="label_size">Size:</strong> <span data-i18n="company1_size">500–2000 employees</span></li>
+                </ul>
+                <h4 data-i18n="desired_missions">Desired Missions</h4>
+                <ul data-i18n-list="company1_missions">
+                    <li>Configure routers &amp; switches</li>
+                    <li>Maintain enterprise network infrastructures</li>
+                    <li>Network security implementation</li>
+                </ul>
+                <h4 data-i18n="skills_to_gain">Skills to Gain</h4>
+                <ul data-i18n-list="company1_skills">
+                    <li>Enterprise network configuration</li>
+                    <li>Infrastructure maintenance</li>
+                    <li>Real-world troubleshooting</li>
+                </ul>
+            </div>
+
+            <div class="company-card">
+                <div class="company-icon"><i class='bx bx-shield-quarter'></i></div>
+                <h3 data-i18n="company2_title">Cybersecurity Consulting Company</h3>
+                <ul class="company-meta">
+                    <li><strong data-i18n="label_domain">Domain:</strong> <span data-i18n="company2_domain">IT Security &amp; Cyber Threat Protection</span></li>
+                    <li><strong data-i18n="label_location">Location:</strong> <span data-i18n="company2_loc">Europe</span></li>
+                    <li><strong data-i18n="label_size">Size:</strong> <span data-i18n="company2_size">200–1000 employees</span></li>
+                </ul>
+                <h4 data-i18n="desired_missions">Desired Missions</h4>
+                <ul data-i18n-list="company2_missions">
+                    <li>Network traffic analysis</li>
+                    <li>Security monitoring &amp; vulnerability scanning</li>
+                    <li>Incident response support</li>
+                </ul>
+                <h4 data-i18n="skills_to_gain">Skills to Gain</h4>
+                <ul data-i18n-list="company2_skills">
+                    <li>Threat detection</li>
+                    <li>Network security analysis</li>
+                    <li>Incident response methods</li>
+                </ul>
+            </div>
+
+            <div class="company-card">
+                <div class="company-icon"><i class='bx bx-server'></i></div>
+                <h3 data-i18n="company3_title">Cloud &amp; IT Services Company</h3>
+                <ul class="company-meta">
+                    <li><strong data-i18n="label_domain">Domain:</strong> <span data-i18n="company3_domain">Cloud Computing &amp; Digital Transformation</span></li>
+                    <li><strong data-i18n="label_location">Location:</strong> <span data-i18n="company3_loc">International</span></li>
+                    <li><strong data-i18n="label_size">Size:</strong> <span data-i18n="company3_size">5000+ employees</span></li>
+                </ul>
+                <h4 data-i18n="desired_missions">Desired Missions</h4>
+                <ul data-i18n-list="company3_missions">
+                    <li>Server configuration &amp; VM management</li>
+                    <li>Cloud infrastructure monitoring</li>
+                    <li>IT support and maintenance</li>
+                </ul>
+                <h4 data-i18n="skills_to_gain">Skills to Gain</h4>
+                <ul data-i18n-list="company3_skills">
+                    <li>Cloud infrastructure management</li>
+                    <li>Virtualization technologies</li>
+                    <li>Enterprise IT operations</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Exams -->
+    <section class="exams" id="exams">
+        <h2 class="heading"><span data-i18n="exams_heading">BTS SIO –</span> <span data-i18n="exams_heading_span">Exams</span></h2>
+        <div class="exams-container">
+            <p data-i18n="exams_intro">The <strong>BTS SIO – SISR</strong> is evaluated through a combination of continuous assessments and final exams. The exams represent approximately <strong>40 hours</strong> of written and practical evaluations, complemented by project presentations.</p>
+
+            <h3 data-i18n="exams_breakdown">Detailed Exam Breakdown</h3>
+            <ul class="exam-list">
+                <li>
+                    <span class="exam-badge">E4 – Coeff. 5</span>
+                    <strong data-i18n="exam1_title">IT Project Management</strong> – <span data-i18n="exam1_detail">4h written</span>
+                    <p data-i18n="exam1_desc">Managing IT projects, planning tasks, writing documentation, and proposing solutions according to client needs.</p>
+                </li>
+                <li>
+                    <span class="exam-badge">E5 – Coeff. 6</span>
+                    <strong data-i18n="exam2_title">Network and Systems Administration</strong> – <span data-i18n="exam2_detail">5h written/practical</span>
+                    <p data-i18n="exam2_desc">Configuring, maintaining, and troubleshooting IT infrastructures: server admin, network config, security, incident resolution.</p>
+                </li>
+                <li>
+                    <span class="exam-badge">SISR – Coeff. 4</span>
+                    <strong data-i18n="exam3_title">Cybersecurity &amp; IT Security</strong> – <span data-i18n="exam3_detail">3h written/practical</span>
+                    <p data-i18n="exam3_desc">Network security, firewalls, user access management, system protection, and vulnerability detection.</p>
+                </li>
+                <li>
+                    <span class="exam-badge">E6 – Coeff. 3</span>
+                    <strong data-i18n="exam4_title">Technical Support and IT Assistance</strong> – <span data-i18n="exam4_detail">3h practical</span>
+                    <p data-i18n="exam4_desc">Providing technical support, resolving incidents, and documenting procedures in real-world simulations.</p>
+                </li>
+                <li>
+                    <span class="exam-badge">Optional – Coeff. 3</span>
+                    <strong data-i18n="exam5_title">Software Development &amp; Scripting</strong> – <span data-i18n="exam5_detail">4h written/practical</span>
+                    <p data-i18n="exam5_desc">Basic scripting to automate tasks, manage system configurations, and support IT services.</p>
+                </li>
+                <li>
+                    <span class="exam-badge">E7 – Coeff. 2</span>
+                    <strong data-i18n="exam6_title">Professional Communication &amp; Documentation</strong> – <span data-i18n="exam6_detail">2h written</span>
+                    <p data-i18n="exam6_desc">Communicate effectively in a professional environment, write reports, and document projects clearly.</p>
+                </li>
+                <li>
+                    <span class="exam-badge">Internship – Coeff. 6</span>
+                    <strong data-i18n="exam7_title">Internship / Work Placement Evaluation</strong> – <span data-i18n="exam7_detail">Continuous assessment</span>
+                    <p data-i18n="exam7_desc">Evaluated on technical proficiency, professional behavior, and applying theoretical knowledge in real-world situations.</p>
+                </li>
+            </ul>
+
+            <a href="assets/BTS_SIO_Annexe_6_Epreuve E5 - Tableau de synthese_2026.xlsx" class="btn download-btn" target="_blank">
+                <i class='bx bx-download'></i> <span data-i18n="download_exams">Download Exams Summary (xlsx)</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Technology Watch -->
+    <section class="tech-watch" id="Technology-Watch">
+        <h2 class="heading"><span data-i18n="tech_heading">Technology</span> <span data-i18n="tech_heading_span">Watch</span></h2>
         <div class="tech-container">
 
-            <!-- Cybersecurity -->
             <div class="tech-card">
                 <i class='bx bx-shield-quarter'></i>
-                <h3>Cybersecurity</h3>
-                <p>
-                    Explore latest trends in cybersecurity, from AI-driven threat detection to zero-trust architectures.
-                    Learn more from <a href="https://www.cisa.gov/" target="_blank">CISA (USA Cybersecurity &
-                        Infrastructure Security Agency)</a>
-                    or <a href="https://www.enisa.europa.eu/" target="_blank">ENISA (EU Cybersecurity Agency)</a>.
-                </p>
+                <h3 data-i18n="tech1_title">Cybersecurity</h3>
+                <p data-i18n="tech1_p">Latest trends: AI-driven threat detection, zero-trust architectures.</p>
+                <div class="tech-links">
+                    <a href="https://www.cisa.gov/" target="_blank">CISA</a>
+                    <a href="https://www.enisa.europa.eu/" target="_blank">ENISA</a>
+                </div>
             </div>
 
-            <!-- Artificial Intelligence -->
             <div class="tech-card">
                 <i class='bx bx-robot'></i>
-                <h3>Artificial Intelligence</h3>
-                <p>
-                    Follow the newest AI technologies in machine learning, deep learning, and automation.
-                    Official resources: <a href="https://ai.google/" target="_blank">Google AI</a> and
-                    <a href="https://openai.com/" target="_blank">OpenAI</a>.
-                </p>
+                <h3 data-i18n="tech2_title">Artificial Intelligence</h3>
+                <p data-i18n="tech2_p">Machine learning, deep learning, and automation technologies.</p>
+                <div class="tech-links">
+                    <a href="https://ai.google/" target="_blank">Google AI</a>
+                    <a href="https://openai.com/" target="_blank">OpenAI</a>
+                </div>
             </div>
 
-            <!-- Quantum Computing -->
             <div class="tech-card">
                 <i class='bx bx-atom'></i>
-                <h3>Quantum Computing</h3>
-                <p>
-                    Quantum computing is reshaping IT and cryptography. Learn more at
-                    <a href="https://quantum-computing.ibm.com/" target="_blank">IBM Quantum</a> or
-                    <a href="https://quantum.nasa.gov/" target="_blank">NASA Quantum Computing</a>.
-                </p>
+                <h3 data-i18n="tech3_title">Quantum Computing</h3>
+                <p data-i18n="tech3_p">Reshaping IT and cryptography — the future of computation.</p>
+                <div class="tech-links">
+                    <a href="https://quantum-computing.ibm.com/" target="_blank">IBM Quantum</a>
+                    <a href="https://quantum.nasa.gov/" target="_blank">NASA</a>
+                </div>
             </div>
 
-            <!-- Cryptocurrencies & Blockchain -->
             <div class="tech-card">
                 <i class='bx bx-bitcoin'></i>
-                <h3>Crypto & Blockchain</h3>
-                <p>
-                    Explore decentralized finance, smart contracts, and secure transactions.
-                    Visit <a href="https://www.coindesk.com/" target="_blank">CoinDesk</a> or
-                    <a href="https://ethereum.org/en/" target="_blank">Ethereum Official</a>.
-                </p>
+                <h3 data-i18n="tech4_title">Crypto &amp; Blockchain</h3>
+                <p data-i18n="tech4_p">Decentralized finance, smart contracts, and secure transactions.</p>
+                <div class="tech-links">
+                    <a href="https://www.coindesk.com/" target="_blank">CoinDesk</a>
+                    <a href="https://ethereum.org/en/" target="_blank">Ethereum</a>
+                </div>
             </div>
 
-            <!-- Data Protection & GDPR -->
             <div class="tech-card">
                 <i class='bx bx-lock-alt'></i>
-                <h3>Data Privacy & GDPR</h3>
-                <p>
-                    Stay informed about personal data protection and GDPR compliance.
-                    Official resources: <a href="https://gdpr.eu/" target="_blank">GDPR.eu</a> and
-                    <a href="https://www.cnil.fr/en" target="_blank">CNIL (France)</a>.
-                </p>
+                <h3 data-i18n="tech5_title">Data Privacy &amp; GDPR</h3>
+                <p data-i18n="tech5_p">Personal data protection and GDPR compliance updates.</p>
+                <div class="tech-links">
+                    <a href="https://gdpr.eu/" target="_blank">GDPR.eu</a>
+                    <a href="https://www.cnil.fr/en" target="_blank">CNIL</a>
+                </div>
             </div>
 
-            <!-- IT Infrastructure -->
             <div class="tech-card">
                 <i class='bx bx-server'></i>
-                <h3>IT Infrastructure</h3>
-                <p>
-                    Learn about modern cloud computing, virtualization, and secure IT environments.
-                    Resources: <a href="https://aws.amazon.com/" target="_blank">AWS Official</a> and
-                    <a href="https://azure.microsoft.com/" target="_blank">Microsoft Azure</a>.
-                </p>
+                <h3 data-i18n="tech6_title">IT Infrastructure</h3>
+                <p data-i18n="tech6_p">Cloud computing, virtualization, and secure IT environments.</p>
+                <div class="tech-links">
+                    <a href="https://aws.amazon.com/" target="_blank">AWS</a>
+                    <a href="https://azure.microsoft.com/" target="_blank">Azure</a>
+                </div>
             </div>
 
         </div>
     </section>
-    <!-- Projects Section -->
-    <section class="projects" id="projects">
-        <h2 class="heading">My <span>Projects</span></h2>
 
+    <!-- Projects -->
+    <section class="projects" id="projects">
+        <h2 class="heading"><span data-i18n="projects_heading">My</span> <span data-i18n="projects_heading_span">Projects</span></h2>
         <div class="projects-container">
 
-            <!-- Project Card Example -->
             <div class="project-card">
-                <h3>QR Code Generator – Python Project</h3>
-                <p>This Python project allows users to generate QR codes easily from any text or URL. It uses the qrcode
-                    library to create scannable QR codes that can be saved as images. This project demonstrates
-                    practical Python skills in scripting, user input handling, and image generation, making it a great
-                    addition to any portfolio showcasing programming proficiency.</p>
-                <a href="assets/Portfolio_Projects_Detailed-1-2.pdf" class="download-btn" target="_blank">Download
-                    PDF</a>
+                <div class="project-icon"><i class='bx bxl-python'></i></div>
+                <h3 data-i18n="proj1_title">QR Code Generator</h3>
+                <span class="project-tag" data-i18n="proj1_tag">Python</span>
+                <p data-i18n="proj1_p">Generate QR codes from any text or URL using the qrcode library. Demonstrates scripting, user input handling, and image generation.</p>
+                <a href="assets/Portfolio_Projects_Detailed-1-2.pdf" class="btn" target="_blank"><i class='bx bx-download'></i> <span data-i18n="view_pdf">View PDF</span></a>
             </div>
 
             <div class="project-card">
-                <h3>Encrypt Information – C Project</h3>
-                <p>This C project demonstrates how to encrypt and decrypt text using a simple Caesar cipher. Users can
-                    input any text and a key (1-25) to securely encode their information. The program showcases skills
-                    in C programming, string manipulation, and algorithm implementation, making it a solid example of
-                    practical programming and problem-solving abilities for a portfolio.</p>
-                <a href="assets/Portfolio_Projects_Detailed-3-4.pdf" class="download-btn" target="_blank">Download PDF</a>
+                <div class="project-icon"><i class='bx bx-lock'></i></div>
+                <h3 data-i18n="proj2_title">Caesar Cipher – Encrypt Info</h3>
+                <span class="project-tag" data-i18n="proj2_tag">C Language</span>
+                <p data-i18n="proj2_p">Encrypt and decrypt text using a Caesar cipher in C. Showcases string manipulation and algorithm implementation.</p>
+                <a href="assets/Portfolio_Projects_Detailed-3-4.pdf" class="btn" target="_blank"><i class='bx bx-download'></i> <span data-i18n="view_pdf">View PDF</span></a>
             </div>
 
             <div class="project-card">
-                <h3>Criptograph on Linux</h3>
-                <p>Cryptography on Linux involves using tools and programming techniques to secure data, communications,
-                    and systems. It includes encryption and decryption of files, secure key management, and implementing
-                    cryptographic algorithms. Linux provides powerful utilities like OpenSSL, GPG, and native libraries
-                    that allow developers and system administrators to protect sensitive information and ensure data
-                    integrity and confidentiality.</p>
-                <a href="assets/TP_Cryptographie.docx.pdf" class="download-btn" target="_blank">Download PDF</a>
+                <div class="project-icon"><i class='bx bx-terminal'></i></div>
+                <h3 data-i18n="proj3_title">Cryptography on Linux</h3>
+                <span class="project-tag" data-i18n="proj3_tag">Linux / OpenSSL</span>
+                <p data-i18n="proj3_p">Using OpenSSL, GPG, and native Linux libraries to encrypt files, manage keys, and implement cryptographic algorithms.</p>
+                <a href="assets/TP_Cryptographie.pdf" class="btn" target="_blank"><i class='bx bx-download'></i> <span data-i18n="view_pdf">View PDF</span></a>
             </div>
 
         </div>
     </section>
-    <!-- Contact Section -->
+
+    <!-- Contact -->
     <section class="contact" id="contact">
-        <h2 class="heading">Contact <span>Me</span></h2>
+        <h2 class="heading"><span data-i18n="contact_heading">Contact</span> <span data-i18n="contact_heading_span">Me</span></h2>
 
         <div class="contact-container">
 
-            <form class="contact-form" action="mailto:ton.email@example.com" method="POST" enctype="text/plain">
-                <div class="form-row">
-                    <input type="text" name="firstname" placeholder="First Name" required>
-                    <input type="text" name="lastname" placeholder="Last Name" required>
-                </div>
-                <input type="email" name="email" placeholder="Email Address" required>
-                <input type="text" name="subject" placeholder="Subject" required>
-                <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
-                <button type="submit" class="btn">Send Message</button>
-            </form>
-
             <div class="contact-info">
-                <h3>Contact Information</h3>
-                <p><strong>Email:</strong> ton.email@example.com</p>
-                <p><strong>Phone:</strong> +33 6 12 34 56 78</p>
-                <p><strong>Location:</strong> Paris, France</p>
+                <h3 data-i18n="get_in_touch">Get in Touch</h3>
+                <div class="info-item">
+                    <i class='bx bx-envelope'></i>
+                    <div>
+                        <strong data-i18n="label_email">Email</strong>
+                        <p>sahed.arshadalikhan@gmail.com</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class='bx bx-map'></i>
+                    <div>
+                        <strong data-i18n="label_loc">Location</strong>
+                        <p>Paris, France</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class='bx bxl-linkedin'></i>
+                    <div>
+                        <strong data-i18n="label_linkedin">LinkedIn</strong>
+                        <p><a href="https://www.linkedin.com/in/sahed-arshed-ali-khan-6942103b6/" target="_blank">sahed-arshed-ali-khan</a></p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class='bx bxl-github'></i>
+                    <div>
+                        <strong data-i18n="label_github">GitHub</strong>
+                        <p><a href="https://github.com/Sahed-Khan" target="_blank">Sahed-Khan</a></p>
+                    </div>
+                </div>
             </div>
+
+            <form class="contact-form" id="contactForm" novalidate>
+                <div class="form-row">
+                    <div class="input-group">
+                        <input type="text" name="firstname" id="firstname" required placeholder=" ">
+                        <label for="firstname">First Name</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" name="lastname" id="lastname" required placeholder=" ">
+                        <label for="lastname">Last Name</label>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <input type="email" name="email" id="email" required placeholder=" ">
+                    <label for="email">Email Address</label>
+                </div>
+                <div class="input-group">
+                    <input type="text" name="subject" id="subject" required placeholder=" ">
+                    <label for="subject">Subject</label>
+                </div>
+                <div class="input-group">
+                    <textarea name="message" id="message" rows="5" required placeholder=" "></textarea>
+                    <label for="message">Your Message</label>
+                </div>
+
+                <button type="submit" class="btn" id="submitBtn">
+                    <span class="btn-text"><i class='bx bx-send'></i> Send Message</span>
+                    <span class="btn-loading" style="display:none"><i class='bx bx-loader-alt bx-spin'></i> Sending…</span>
+                </button>
+
+                <div class="form-success" id="formSuccess" style="display:none">
+                    <i class='bx bx-check-circle'></i>
+                    <p>Message sent successfully! I'll get back to you soon.</p>
+                </div>
+                <div class="form-error" id="formError" style="display:none">
+                    <i class='bx bx-error-circle'></i>
+                    <p>Something went wrong. Please try again or email me directly.</p>
+                </div>
+            </form>
 
         </div>
     </section>
 
-</body>
+    <!-- Footer -->
+    <footer class="footer">
+        <p data-i18n="footer_copy">© 2025 Sahed Arshed Ali Khan. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="https://www.linkedin.com/in/sahed-arshed-ali-khan-6942103b6/" target="_blank"><i class='bx bxl-linkedin'></i></a>
+            <a href="https://github.com/Sahed-Khan" target="_blank"><i class='bx bxl-github'></i></a>
+            <a href="https://www.instagram.com/sahed5000a" target="_blank"><i class='bx bxl-instagram'></i></a>
+        </div>
+    </footer>
 
+    <script src="i18n.js"></script>
+    <script src="script.js"></script>
+</body>
 </html>
